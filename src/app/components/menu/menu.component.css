@@ -1,0 +1,10 @@
+.menu {
+  background-color: #AE9CA4;
+  border-radius: 1%;
+  padding: 2%;
+  margin-right: 2%;
+  height: 100%
+}
+li > a, p {
+  color: white;
+}

@@ -1,0 +1,8 @@
+.constrainer {
+  height: 100%;
+}
+.scrolltable {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
