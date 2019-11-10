@@ -1,1 +1,96 @@
-<p>product-create works!</p>
+<div class="hero is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-4">
+          <form class="box">
+            <div class="field">
+              <label class="label">Modelo</label>
+              <div class="control has-icons-left">
+                <input type="text" class="input" required/>
+                <span class="icon is-small is-left">
+                <fa-icon [icon]="faGem"></fa-icon>
+                </span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Color</label>
+              <div class="control has-icons-left">
+                <input type="text" class="input" required/>
+                <span class="icon is-small is-left">
+                  <fa-icon [icon]="faTint"></fa-icon>
+                </span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Estado</label>
+              <div class="control has-icons-left">
+                <input type="text" class="input" required/>
+                <span class="icon is-small is-left">
+                  <fa-icon [icon]="faMapMarker"></fa-icon>
+                </span>
+              </div>
+            </div>
+
+            <div class="columns">
+              <div class="column">
+                <div class="field">
+                  <label class="label">Talla</label>
+                  <div class="control has-icons-left">
+                    <input type="number" class="input" required/>
+                    <span class="icon is-small is-left">
+                      <fa-icon [icon]="faShoePrints"></fa-icon>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column">
+                <div class="field">
+                  <label class="label">Cantidad</label>
+                  <div class="control has-icons-left">
+                    <input type="number" class="input" required/>
+                    <span class="icon is-small is-left">
+                      <fa-icon [icon]="faWareHouse"></fa-icon>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="file is-right is-info">
+                <label class="file-label">
+                  <input class="file-input" type="file" name="resume">
+                  <span class="file-cta">
+                    <span class="file-icon">
+                      <fa-icon [icon]="faImage"></fa-icon>
+                    </span>
+                    <span class="file-label">imagen</span>
+                  </span>
+                  <span class="file-name">
+                    Screen Shot 2017-07-29 at 15.54.25.png
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <footer style="margin-top: 8%">
+              <div class="field is-grouped">
+                <div class="control">
+                  <button class="button is-success">Guardar</button>
+                </div>
+                <div class="control">
+                  <button class="button is-warning">Limpiar</button>
+                </div>
+              </div>
+            </footer>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

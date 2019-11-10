@@ -11,6 +11,7 @@ import {ProductsRoutesModule} from './products.routes';
 import {ProductComponent} from './product.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import {PipesModule} from '../pipes/pipes.module';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {PipesModule} from '../pipes/pipes.module';
     FormsModule,
     RouterModule,
     ProductsRoutesModule,
-    PipesModule
+    PipesModule,
+    FontAwesomeModule
   ]
 })
 export class ProductsModule {}
