@@ -5,6 +5,7 @@ export class Shoe {
   public quantity: number;
   public status: string;
   public creationDate: string;
+  public imagePath: string;
 
   constructor(
     model: string,
@@ -12,12 +13,14 @@ export class Shoe {
     size: string,
     quantity: number,
     status: string,
-    creationDate: string) {
+    creationDate: string,
+    imagePath: string) {
     this.model = model;
     this.color = color;
     this.size = size;
     this.quantity = quantity;
     this.status = status;
     this.creationDate = creationDate;
+    this.imagePath = imagePath;
   }
 }

@@ -25,10 +25,16 @@ export class DeleteProduct implements Action {
   readonly type = DELETE_PRODUCT;
   constructor(public payload: number) {}
 }
+export const SET_FILTER = '[Stock Actions] Set Filter';
+export class SetFilter implements Action {
+  readonly type = SET_FILTER;
+  constructor(public payload: string) {}
+}
 
 export type StockActions =
   | FetchStock
   | StoreProducts
   | CreateProduct
   | UpdateProduct
-  | DeleteProduct;
+  | DeleteProduct
+  | SetFilter;

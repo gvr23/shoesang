@@ -9,6 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import {AppRoutes} from './app.routes';
 import {RouterModule} from '@angular/router';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import {RouterModule} from '@angular/router';
     StoreModule.forRoot(fromApp.AppReducers),
     BrowserModule,
     AppRoutes,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
