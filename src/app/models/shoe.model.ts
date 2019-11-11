@@ -1,4 +1,5 @@
 export class Shoe {
+  public shoeId: number;
   public model: string;
   public color: string;
   public size: string;
@@ -8,6 +9,7 @@ export class Shoe {
   public imagePath: string;
 
   constructor(
+    id: number,
     model: string,
     color: string,
     size: string,
@@ -15,6 +17,7 @@ export class Shoe {
     status: string,
     creationDate: string,
     imagePath: string) {
+    this.shoeId = id;
     this.model = model;
     this.color = color;
     this.size = size;

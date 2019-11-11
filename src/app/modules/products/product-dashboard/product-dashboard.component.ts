@@ -23,6 +23,9 @@ export class ProductDashboardComponent implements OnInit, OnDestroy, DoCheck {
       map(stocksState => stocksState.stock)
     ).subscribe(stocks => this.products = stocks);
   }
+  ngDoCheck(): void {
+    this.obtainShoes();
+  }
   ngOnDestroy(): void {
     this.storeSub.unsubscribe();
   }
@@ -32,9 +35,4 @@ export class ProductDashboardComponent implements OnInit, OnDestroy, DoCheck {
       this.filteringString = stockState.filterString;
     });
   }
-
-  ngDoCheck(): void {
-    this.obtainShoes();
-  }
-
 }

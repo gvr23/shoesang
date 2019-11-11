@@ -8,3 +8,11 @@
 #second {
   margin-left: .8%;
 }
+.constrainer {
+  height: 100vh;
+}
+.scrollable {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}

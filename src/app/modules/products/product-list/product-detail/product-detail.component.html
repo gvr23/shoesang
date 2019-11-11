@@ -1,0 +1,39 @@
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <figure class="image">
+            <img class="is-rounded" src="{{ productDetail.imagePath }}" alt="{{ productDetail.model }}">
+          </figure>
+        </div>
+
+        <div class="column is-9">
+          <h1 class="title">{{ productDetail.model }}</h1>
+          <h2 class="subtitle">{{ productDetail.status }}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr />
+
+<section>
+  <h3 class="subtitle">Color: {{ productDetail.color }}</h3>
+  <h3 class="subtitle">Talla: {{ productDetail.size }}</h3>
+  <h3 class="subtitle">Cantidad: {{ productDetail.quantity }}</h3>
+  <h3 class="subtitle">Fecha: {{ productDetail.creationDate }}</h3>
+  <h3 class="subtitle">Ruta de imagen: {{ productDetail.imagePath }}</h3>
+
+  <div class="level">
+    <div class="level-left">
+      <div class="level-item">
+        <button class="button" style="background-color: #56b5b0; color: white">Editar</button>
+      </div>
+      <div class="level-item">
+        <button class="button" style="background-color: #CF3D2A; color: white; outline: #CF3D2A">Borrar</button>
+      </div>
+    </div>
+  </div>
+</section>

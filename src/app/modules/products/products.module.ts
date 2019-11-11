@@ -3,15 +3,17 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 
-import {ProductCreateComponent} from './product-create/product-create.component';
-import {ProductDetailComponent} from './product-detail/product-detail.component';
-import {ProductDashboardComponent} from './product-dashboard/product-dashboard.component';
-import { ProductEditComponent } from './product-edit/product-edit.component';
 import {ProductsRoutesModule} from './products.routes';
 import {ProductComponent} from './product.component';
+import {ProductDashboardComponent} from './product-dashboard/product-dashboard.component';
+import {ProductCreateComponent} from './product-create/product-create.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import {ProductDetailComponent} from './product-list/product-detail/product-detail.component';
+import { ProductEditComponent } from './product-list/product-edit/product-edit.component';
+
 import {PipesModule} from '../pipes/pipes.module';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import { ProductItemComponent } from './product-list/product-item/product-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
     ProductCreateComponent,
     ProductDetailComponent,
     ProductEditComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductItemComponent
   ],
   imports: [
     CommonModule,

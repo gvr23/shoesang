@@ -1,12 +1,15 @@
 <section class="section">
   <div class="columns">
     <div class="column is-4">
-      <button
-        class="button is-success"
-        [routerLink]="['/products/list', '1']"
-      >New Recipe</button>
-      <hr />
-      <p>here goes the list</p>
+      <div class="constrainer">
+        <div class="scrollable hero is-fullheight">
+          <app-product-item
+            *ngFor="let shoe of products | filter:filteringString:'model'; let i = index;"
+            [product]="shoe"
+            [selected]="shoe.shoeId"
+          ></app-product-item>
+        </div>
+      </div>
     </div>
     <div class="column is-7.2" id="second">
       <router-outlet></router-outlet>
