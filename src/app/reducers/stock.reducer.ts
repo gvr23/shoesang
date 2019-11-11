@@ -47,9 +47,11 @@ export function StockReducer(state = INITIAL_STATE, action: StockActions.StockAc
         stock: [...state.stock, action.payload]
       };
     case StockActions.UPDATE_PRODUCT:
-      const updatedProduct = {...state.stock[action.payload.index], ...action.payload.product};
-      const updatedStock = [...state.stock];
-      updatedStock[action.payload.index] = updatedProduct;
+      const productFound = state.stock.find((item) => item.shoeId === action.payload.index);
+      const updatedProduct = {...productFound, ...action.payload.product};
+      const stockCopy = [...state.stock];
+      let updatedStock = stockCopy.filter((item) => item.shoeId !== action.payload.index);
+      updatedStock = [...updatedStock, {...updatedProduct}];
       return {
         ...state,
         stock: updatedStock
@@ -57,7 +59,7 @@ export function StockReducer(state = INITIAL_STATE, action: StockActions.StockAc
     case StockActions.DELETE_PRODUCT:
       return {
         ...state,
-        stock: state.stock.filter((product, index) => index !== action.payload)
+        stock: state.stock.filter((product, index) => product.shoeId !== action.payload)
       };
     case StockActions.SET_FILTER:
       return {

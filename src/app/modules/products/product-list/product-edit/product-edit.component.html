@@ -1,1 +1,135 @@
-<p>product-edit works!</p>
+<div class="hero is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-7">
+          <form class="box" [formGroup]="shoeForm" (ngSubmit)="onSubmit()">
+            <div class="field">
+              <label class="label">Modelo</label>
+              <div class="control has-icons-left">
+                <input
+                  formControlName="shoeModel"
+                  type="text"
+                  class="input"
+                  required
+                />
+                <span class="icon is-small is-left">
+                <fa-icon [icon]="faGem"></fa-icon>
+                </span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Color</label>
+              <div class="control has-icons-left">
+                <input
+                  formControlName="shoeColor"
+                  type="text"
+                  class="input"
+                  required
+                />
+                <span class="icon is-small is-left">
+                  <fa-icon [icon]="faTint"></fa-icon>
+                </span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Estado</label>
+              <div class="control has-icons-left">
+                <input
+                  formControlName="shoeStatus"
+                  type="text"
+                  class="input"
+                  required
+                />
+                <span class="icon is-small is-left">
+                  <fa-icon [icon]="faMapMarker"></fa-icon>
+                </span>
+              </div>
+            </div>
+
+            <div class="columns">
+              <div class="column">
+                <div class="field">
+                  <label class="label">Talla</label>
+                  <div class="control has-icons-left">
+                    <input
+                      formControlName="shoeSize"
+                      type="number"
+                      class="input"
+                      required
+                    />
+                    <span class="icon is-small is-left">
+                      <fa-icon [icon]="faShoePrints"></fa-icon>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column">
+                <div class="field">
+                  <label class="label">Cantidad</label>
+                  <div class="control has-icons-left">
+                    <input
+                      formControlName="shoeQuantity"
+                      type="number"
+                      class="input"
+                      required
+                    />
+                    <span class="icon is-small is-left">
+                      <fa-icon [icon]="faWareHouse"></fa-icon>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="columns">
+                <div class="column">
+                  <button class="button is-link">
+                    <span class="icon is-small">
+                      <fa-icon [icon]="faImage"></fa-icon>
+                    </span>
+                    <span>image</span>
+                  </button>
+                </div>
+
+                <div class="column is-three-quarters">
+                  <input
+                    formControlName="shoeImage"
+                    class="input"
+                    type="text"
+                    disabled
+                  />
+                </div>
+              </div>
+            </div>
+
+            <footer style="margin-top: 8%">
+              <div class="field is-grouped">
+                <div class="control">
+                  <button class="button is-success">
+                    <span class="icon is-small">
+                      <fa-icon [icon]="faSave"></fa-icon>
+                    </span>
+                    <span>Guardar</span>
+                  </button>
+                </div>
+                <div class="control">
+                  <button class="button is-danger" type="button">
+                    <span class="icon is-small">
+                      <fa-icon [icon]="faClose"></fa-icon>
+                    </span>
+                    <span>Cancelar</span>
+                  </button>
+                </div>
+              </div>
+            </footer>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 
 import {ProductsRoutesModule} from './products.routes';
@@ -28,6 +28,7 @@ import { ProductItemComponent } from './product-list/product-item/product-item.c
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule,
     ProductsRoutesModule,
     PipesModule,

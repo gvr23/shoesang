@@ -17,7 +17,7 @@
   </div>
 </section>
 
-<hr />
+<hr/>
 
 <section>
   <h3 class="subtitle">Color: {{ productDetail.color }}</h3>
@@ -29,10 +29,27 @@
   <div class="level">
     <div class="level-left">
       <div class="level-item">
-        <button class="button" style="background-color: #56b5b0; color: white">Editar</button>
+        <button
+          class="button is-success is-outlined"
+          (click)="onEditRecipe()"
+        >
+          <span class="icon is-small">
+            <fa-icon [icon]="faEdit"></fa-icon>
+          </span>
+          <span>Editar</span>
+        </button>
       </div>
+
       <div class="level-item">
-        <button class="button" style="background-color: #CF3D2A; color: white; outline: #CF3D2A">Borrar</button>
+        <button
+          class="button is-danger is-outlined"
+          (click)="onDeleteProduct()"
+        >
+          <span>Borrar</span>
+          <span class="icon is-small">
+           <fa-icon [icon]="faTrash"></fa-icon>
+          </span>
+        </button>
       </div>
     </div>
   </div>
