@@ -3,11 +3,17 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-4">
-          <form class="box">
+          <form class="box" #f="ngForm" (ngSubmit)="onSubmit()">
             <div class="field">
               <label class="label">Modelo</label>
               <div class="control has-icons-left">
-                <input type="text" class="input" required/>
+                <input
+                  ngModel
+                  name="shoeModel"
+                  type="text"
+                  class="input"
+                  required
+                />
                 <span class="icon is-small is-left">
                 <fa-icon [icon]="faGem"></fa-icon>
                 </span>
@@ -17,7 +23,13 @@
             <div class="field">
               <label class="label">Color</label>
               <div class="control has-icons-left">
-                <input type="text" class="input" required/>
+                <input
+                  ngModel
+                  name="shoeColor"
+                  type="text"
+                  class="input"
+                  required
+                />
                 <span class="icon is-small is-left">
                   <fa-icon [icon]="faTint"></fa-icon>
                 </span>
@@ -27,7 +39,13 @@
             <div class="field">
               <label class="label">Estado</label>
               <div class="control has-icons-left">
-                <input type="text" class="input" required/>
+                <input
+                  ngModel
+                  name="shoeStatus"
+                  type="text"
+                  class="input"
+                  required
+                />
                 <span class="icon is-small is-left">
                   <fa-icon [icon]="faMapMarker"></fa-icon>
                 </span>
@@ -39,7 +57,13 @@
                 <div class="field">
                   <label class="label">Talla</label>
                   <div class="control has-icons-left">
-                    <input type="number" class="input" required/>
+                    <input
+                      ngModel
+                      name="shoeSize"
+                      type="number"
+                      class="input"
+                      required
+                    />
                     <span class="icon is-small is-left">
                       <fa-icon [icon]="faShoePrints"></fa-icon>
                     </span>
@@ -51,7 +75,13 @@
                 <div class="field">
                   <label class="label">Cantidad</label>
                   <div class="control has-icons-left">
-                    <input type="number" class="input" required/>
+                    <input
+                      ngModel
+                      name="shoeQuantity"
+                      type="number"
+                      class="input"
+                      required
+                    />
                     <span class="icon is-small is-left">
                       <fa-icon [icon]="faWareHouse"></fa-icon>
                     </span>
@@ -61,19 +91,25 @@
             </div>
 
             <div class="field">
-              <div class="file is-right is-info">
-                <label class="file-label">
-                  <input class="file-input" type="file" name="resume">
-                  <span class="file-cta">
-                    <span class="file-icon">
+              <div class="columns">
+                <div class="column">
+                  <button class="button is-link">
+                    <span class="icon is-small">
                       <fa-icon [icon]="faImage"></fa-icon>
                     </span>
-                    <span class="file-label">imagen</span>
-                  </span>
-                  <span class="file-name">
-                    Screen Shot 2017-07-29 at 15.54.25.png
-                  </span>
-                </label>
+                    <span>image</span>
+                  </button>
+                </div>
+
+                <div class="column is-two-thirds">
+                  <input
+                    ngModel
+                    name="shoeImage"
+                    class="input"
+                    type="text"
+                    required
+                  />
+                </div>
               </div>
             </div>
 
@@ -83,7 +119,7 @@
                   <button class="button is-success">Guardar</button>
                 </div>
                 <div class="control">
-                  <button class="button is-warning">Limpiar</button>
+                  <button class="button is-warning" type="button" (click)="onClear()">Limpiar</button>
                 </div>
               </div>
             </footer>

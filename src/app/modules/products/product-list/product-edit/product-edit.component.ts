@@ -59,7 +59,7 @@ export class ProductEditComponent implements OnInit {
         value.shoeSize,
         +value.shoeQuantity,
         value.shoeStatus,
-        this.datePipe.transform(new Date(), 'dd-MM-yyyy'),
+        this.datePipe.transform(new Date(), 'dd-MMM-yyyy'),
         value.shoeImage
       );
 
@@ -67,6 +67,7 @@ export class ProductEditComponent implements OnInit {
       this.router.navigate(['products/list', this.id]);
     }
   };
+  onCancel = () => { this.router.navigate(['products/list', this.id]); };
   getShoeId = () => {
     this.route.params.subscribe((params: Params) => {
       this.id = +params.id;
